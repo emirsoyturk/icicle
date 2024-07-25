@@ -33,7 +33,7 @@ namespace icicle {
                                  *   but if a different (better) upper bound is known, it should be reflected in this variable.
                                  *   Default value: 0 (set to the bitsize of scalar field). */
     int batch_size;             /**< Number of MSMs to compute. Default value: 1. */
-    bool are_bases_shared;      /**< Bases are shared for batch. Set to true if all MSMs use the same bases. Otherwise
+    bool are_points_shared_in_batch;      /**< Bases are shared for batch. Set to true if all MSMs use the same bases. Otherwise
                                    expecting #bases==#scalars. Default value: true. */
     bool are_scalars_on_device; /**< True if scalars are on device, false if they're on host. Default value: false. */
     bool
@@ -64,7 +64,7 @@ namespace icicle {
       0,       // c
       0,       // bitsize
       1,       // batch_size
-      true,    // are_bases_shared
+      true,    // are_points_shared_in_batch
       false,   // are_scalars_on_device
       false,   // are_scalars_montgomery_form
       false,   // are_points_on_device
